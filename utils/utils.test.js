@@ -3,16 +3,20 @@ const utils  = require('./utils');
 const expect = require('expect');
 
 describe('utils', () => {
-    it('should add two numbers', () => {
 
-        let res = utils.add(33,11);
+    describe('#add', () => {
+        it('should add two numbers', () => {
 
-        expect(res).toBe(44).toBeA('number');
+                let res = utils.add(33,11);
 
-       // if(res !== 44) {
-         //   throw new Error(`Expected 44, but got ${res}.`)
-        // }
+                expect(res).toBe(44).toBeA('number');
+
+               // if(res !== 44) {
+                 //   throw new Error(`Expected 44, but got ${res}.`)
+                // }
+            });
     });
+
 
     it('should async add two numbers', (done) => {
         utils.asyncAdd(4,3,(sum) => {
